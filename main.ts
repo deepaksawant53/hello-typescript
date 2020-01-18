@@ -34,9 +34,27 @@ doSomething();*/
 // Now typescript will throw this error during compilation
 // But it will still go ahead and create a main.js file with code same as in
 // above example as it is a valid javascript code.
-function doSomething() {
+/*function doSomething() {
     for (let i = 0; i < 5; i++) {
         console.log(i);
     }
     // console.log(i);
-}
+}*/
+// Variables in typescript
+// So in the below example if we first assign a number value to count
+// and then if we go ahead and try to assign a string value to count
+// It will show you an error in typescript
+// Again if we use tsc to compile this code, it will get successfully compiled
+// into js code. But typescript compiler will show you an error.
+// Here if we hover mouse over count variable we will see that 
+// count variable has type number.
+let count = 5;
+count = 'a';
+// In this example when we declare a variable without assigning any value
+// typescript will give it type any.
+// So the rule is when we dont know the type of variable ahead of time
+// At that time we should use type as any.
+let a;
+a = 1;
+a = true;
+a = 'a';

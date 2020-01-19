@@ -48,13 +48,26 @@ doSomething();*/
 // into js code. But typescript compiler will show you an error.
 // Here if we hover mouse over count variable we will see that 
 // count variable has type number.
-let count = 5;
-count = 'a';
+/*let count = 5;
+count = 'a';*/
 // In this example when we declare a variable without assigning any value
 // typescript will give it type any.
 // So the rule is when we dont know the type of variable ahead of time
 // At that time we should use type as any.
-let a;
+/*let a;
 a = 1;
 a = true;
-a = 'a';
+a = 'a';*/
+// So in type script we have following different types
+let a: number;
+let b: boolean;
+let c: string;
+let d: any;
+let e: number[] = [1, 2, 3];
+let f: any[] = [1, true, 'a', false];
+// In case of enum the get numbered by default in the order they are declared
+// So below enum will have values Red = 0, Green = 1 and Blue = 2
+// In future if someone add a new value in between Green and Blue then value of Blue will change to 4
+// enum Color {Red, Green, Blue}
+// To prevent this kind of problems it is better to give values to enum explicitly as shown below
+enum Color {Red = 0, Green = 1, Blue = 2};
